@@ -1,8 +1,8 @@
 import Navbar from "./Navbar";
 import TextForm from "./TextForm";
-import About from "./About";
+// import About from "./About";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState("light");
@@ -17,19 +17,19 @@ function App() {
   };
   return (
     <>
-      <Router>
-        <Navbar title="Textutils" mode={mode} toggleMode={toggleMode} />
-        <div className="container my-3">
-          <Switch>
+      {/* <Router> */}
+      <Navbar title="Textutils" mode={mode} toggleMode={toggleMode} />
+      <div className="container my-3">
+        {/* <Switch>
             <Route exact path="/about">
               <About mode={mode} />
             </Route>
-            <Route exact path="/">
-              <TextForm heading="Enter Text here :" mode={mode} />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+            <Route exact path="/"> */}
+        <TextForm heading="Enter Text here :" mode={mode} />
+        {/* </Route>
+          </Switch> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
